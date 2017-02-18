@@ -38,7 +38,7 @@ public class Map{
 				{
 					if (mapData[i,j,k])
 					{
-						
+						CheckCavity
 					}
 				}
 			}
@@ -47,6 +47,20 @@ public class Map{
 	}
 
 	void ResetMarks()
+	{
+		for (int i = 0; i < 20; i ++)
+		{
+			for ( int j = 0; j < 20 ; j ++)
+			{
+				for (int k = 0; k < 20 ; k ++)
+				{
+					tempMark [i, j, k] = 0;
+				}
+			}
+		}
+	}
+
+	void CheckCavity()
 	{
 		
 	}
