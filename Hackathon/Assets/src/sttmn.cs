@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class sttmn : MonoBehaviour {
 	public Image img;
+	public Text text;
 	float r, g, b;
 	int rd, gd, bd;
 	// Use this for initialization
@@ -60,5 +61,6 @@ public class sttmn : MonoBehaviour {
 		b = Random.Range (0, 5) + img.color.b * 255f * bd;
 
 		img.color = new Color (r/255,g/255,b/255);
+		text.color = new Color (r/255,g/255,b/255);
 	}
 }
