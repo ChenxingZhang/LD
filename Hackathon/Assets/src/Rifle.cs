@@ -13,6 +13,7 @@ public class Rifle : MonoBehaviour, Weapon {
 
 	public void Fire (Vector3 dir)
 	{
+        //Debug.Log("Firing!");
 		if (canFire) 
 		{
 			EnterCD ();
@@ -20,7 +21,8 @@ public class Rifle : MonoBehaviour, Weapon {
 
 			//play firing anim
 			playerPos = FindObjectOfType<Player>().transform;
-			Transform bullet = Object.Instantiate(rifleBullet, playerPos);
+			Transform bullet = Object.Instantiate(rifleBullet, playerPos, true);
+            bullet.transform.position = playerPos.position + new Vector3(0.2f, 0.1f, 0f);
 			RifleBulletControl bc = bullet.gameObject.GetComponent<RifleBulletControl> ();
 
 			bc.Fire (dir);
