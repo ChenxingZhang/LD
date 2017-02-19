@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Rifle : MonoBehaviour, Weapon {
 	public Transform rifleBullet;
+	public PlayerControl player;
 
 	Transform playerPos;
 	bool canFire = true;
@@ -24,6 +25,7 @@ public class Rifle : MonoBehaviour, Weapon {
 			Transform bullet = Object.Instantiate(rifleBullet, playerPos, true);
             bullet.transform.position = playerPos.position + new Vector3(0.2f, 0.1f, 0f);
 			RifleBulletControl bc = bullet.gameObject.GetComponent<RifleBulletControl> ();
+			player.FireSound ();
 
 			bc.Fire (dir);
 		}

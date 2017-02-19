@@ -5,13 +5,15 @@ using UnityEngine.UI;
 
 public class Enemy : MonoBehaviour {
 
-	public Image img;       // the img component of the enemy sprite, used for color changing.
+	//public Image img;       // the img component of the enemy sprite, used for color changing.
 	public Animator anim;	// the animator of the sprite
+	public AudioSource audioSrc;
 
 	bool isAttacking, isAlive;
 	float attackTime;
 	float dmg;
 	float hp;
+	float maxHp;
 	float timeTracker;
 	int layerStatus;		//we can use transform.pos to track how far are they to the current layer at the time player changes the axis.
 	void Awake()
@@ -19,6 +21,8 @@ public class Enemy : MonoBehaviour {
 		isAttacking = false;
 		isAlive = true;
 		attackTime = 0.8f;
+		hp = 10f;
+		maxHp = 10f;
 		dmg = 2.0f;
 		timeTracker = 0f;
 		//TODO: want to check if the enemy is on the same layer with player.
@@ -56,7 +60,8 @@ public class Enemy : MonoBehaviour {
 		{
 			//anim.SetTrigger("Die");
 			isAlive = false;
-            Respawn();
+			audioSrc.Play ();
+			StartCoroutine (Respawn());
 		}
 	}
 
@@ -74,14 +79,18 @@ public class Enemy : MonoBehaviour {
 		isAttacking = false;
 	}
 
-	public void Respawn()
+	public IEnumerator Respawn()
 	{
 		//TODO: Map.GetRandomRespawnPoint();
 		//TODO: Map.Generate Enemies(int amount);
 		//For now I just repsawn them at 1, 1, 1.
+		yield return new WaitForSeconds(1.89f);
 		isAlive = true;
+		hp = maxHp;
+		maxHp++;
         float x = Random.Range(-5.0f, 5.0f), y = Random.Range(-5.0f, 5.0f);
         Vector3 var = new Vector3(x, y, -1f);
         gameObject.transform.position = var;
 	}
+		
 }

@@ -6,6 +6,7 @@ public class PlayerControl : MonoBehaviour {
 	public Player player;
 	public Transform cameraTrans;
     public Camera mainCam;
+	public AudioSource audioSrc;
 
 	Ray cameraRay;
 	RaycastHit rayHit;
@@ -13,6 +14,11 @@ public class PlayerControl : MonoBehaviour {
 	void Awake()
 	{
         mainCam = GameObject.FindObjectOfType<Camera>();
+	}
+
+	public void FireSound()
+	{
+		audioSrc.Play();
 	}
 
 	// Update is called once per frame
@@ -32,7 +38,9 @@ public class PlayerControl : MonoBehaviour {
             
 
             if (Physics.Raycast (cameraRay, out rayHit, 10000f, LayerMask.GetMask ("Default"))) {
+				
 				fireDirection = rayHit.point - player.gameObject.transform.position;
+				//Debug.Log (fireDirection + ", " + rayHit + ", " + player.gameObject.transform.position);
                 fireDirection.z = -0f;
                // Debug.Log("Firing target: " + player.gameObject.transform.position + ", " + rayHit.point + ", " + fireDirection);
                 if (player.weapon != null)

@@ -27,6 +27,9 @@ public class GameManagement : MonoBehaviour {
         InitializeMap();
         currAxis = 0;
         frameTimer = 0;
+
+		Transform robot = Object.Instantiate(enemy, enemyParent, true);
+		robot.transform.position = spawnPoints[0] + new Vector3(0.2f, 0.1f, 0f);
 	}
 	
 	// Update is called once per frame
@@ -35,7 +38,7 @@ public class GameManagement : MonoBehaviour {
         {
             frameTimer = 0;
         }
-        if (frameTimer % 300 == 0)
+        if (false)
         {
             Transform robot = Object.Instantiate(enemy, enemyParent, true);
             robot.transform.position = spawnPoints[0] + new Vector3(0.2f, 0.1f, 0f);

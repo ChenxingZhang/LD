@@ -1,17 +1,12 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\src\RifleBulletControl.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\src\Enemy.cs">
     <Files>
-      <File FileName="Assets\src\Initialized.cs" Line="1" Column="1" />
-      <File FileName="Assets\src\Map.cs" Line="17" Column="20" />
-      <File FileName="Assets\src\GameManagement.cs" Line="12" Column="36" />
-      <File FileName="Assets\src\Player.cs" Line="10" Column="2" />
-      <File FileName="Assets\src\PlayerControl.cs" Line="27" Column="46" />
-      <File FileName="Assets\src\Weapon.cs" Line="2" Column="25" />
-      <File FileName="Assets\src\LaserGun.cs" Line="23" Column="4" />
-      <File FileName="Assets\src\Rifle.cs" Line="24" Column="45" />
-      <File FileName="Assets\src\RocketLauncher.cs" Line="37" Column="13" />
-      <File FileName="Assets\src\RifleBulletControl.cs" Line="22" Column="23" />
+      <File FileName="Assets\src\Enemy.cs" Line="90" Column="11" />
+      <File FileName="Assets\src\RifleBulletControl.cs" Line="84" Column="18" />
+      <File FileName="Assets\src\Rifle.cs" Line="28" Column="24" />
+      <File FileName="Assets\src\GameManagement.cs" Line="32" Column="75" />
+      <File FileName="Assets\src\PlayerControl.cs" Line="41" Column="5" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
