@@ -14,7 +14,7 @@ public class Map
 	// Use this for initialization
 	public Map ()
 	{
-		
+		InitializeMap ();
 	}
 
 	void InitializeMap ()

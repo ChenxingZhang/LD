@@ -46,9 +46,18 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Bullet.cs" />
+     <Compile Include="Assets\src\GameManagement.cs" />
      <Compile Include="Assets\src\Initialized.cs" />
+     <Compile Include="Assets\src\LaserGun.cs" />
      <Compile Include="Assets\src\Map.cs" />
+     <Compile Include="Assets\src\Player.cs" />
+     <Compile Include="Assets\src\PlayerControl.cs" />
+     <Compile Include="Assets\src\Rifle.cs" />
+     <Compile Include="Assets\src\RifleBulletControl.cs" />
+     <Compile Include="Assets\src\RocketLauncher.cs" />
      <Compile Include="Assets\src\SceneManagement.cs" />
+     <Compile Include="Assets\src\Weapon.cs" />
      <Compile Include="Assets\src\sttmn.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>D:/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
